@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Painter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <style>
+            .container {
+                text-align: center;
+                position: fixed;
+            }
+        </style>
+        <script src="draw2.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="options" class="row">
+                <select id="color-picker">
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <select id="thickness-picker">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3 selected>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    <option value=6>6</option>
+                    <option value=7>7</option>
+                    <option value=8>8</option>
+                    <option value=9>9</option>
+                    <option value=10>10</option>
+                </select>
+                <button id="erase">Erase All</button>
+            </div>
+        </div>
+        <svg id="draw"></svg>
+    </body>
+</html>

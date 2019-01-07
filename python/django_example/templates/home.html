@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Django Applications</h2>
+
+<!-- with a line "context['app_list'] = ['books']" in views.py -->
+<ul>
+    {% for app_name in app_list %}
+        {% with app_name|add:":"|add:"index" as urlvar %}
+        <!-- books:index -->
+            <li><a href="{% url urlvar %}">{{ app_name }}</a></li>
+        {% endwith %}
+    {% endfor %}
+</ul>
+
+<!-- with "context['verbose_dict'] = dictVerbose" in views.py -->
+<ul>
+    {% for key, value in verbose_dict.items %}
+        <li><a href="{% url key|add:':index' %}">{{ key }}: {{ value }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
