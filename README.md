@@ -11,9 +11,6 @@ repo tree
 │   │   └───whodunit
 │   ├───cs50_pset4
 │   │   └───speller
-│   │       ├───dictionaries
-│   │       ├───keys
-│   │       └───texts
 │   └───lists
 ├───javascript
 │   ├───simple_painter
