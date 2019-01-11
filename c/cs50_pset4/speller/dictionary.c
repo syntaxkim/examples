@@ -54,6 +54,7 @@ bool load(const char *dictionary)
     {
         // Allocate memory for a node. (heap)
         node *n = malloc(sizeof(node));
+        n->next = NULL;
 
         // If no memory left,
         if (n == NULL)
@@ -125,16 +126,6 @@ unsigned int size(void)
 // Returns true if word is in dictionary else false
 bool check(const char *word)
 {
-    for (int i = 0, len = strlen(word) ; i < len ; i++)
-    {
-        // If a word is not a string with only alphabetical characters or apostrophes,
-        if (isalpha(word[i]) == 0 || word[i] == '\'')
-        {
-            // Do not check.
-            return true;
-        }
-    }
-
     // Get index.
     int i = hash(word);
 
